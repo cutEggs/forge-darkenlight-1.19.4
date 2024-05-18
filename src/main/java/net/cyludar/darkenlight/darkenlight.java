@@ -3,6 +3,7 @@ package net.cyludar.darkenlight;
 import com.mojang.logging.LogUtils;
 import net.cyludar.darkenlight.block.ModBlocks;
 import net.cyludar.darkenlight.item.ModItems;
+import net.cyludar.darkenlight.worldgen.ModConfiguredFeatures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -53,6 +54,7 @@ public class darkenlight
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.JADE_BLOCK);
             event.accept(ModBlocks.JADE_ORE);
+            event.accept(ModBlocks.DEEPSLATE_JADE_ORE);
         }
     }
 

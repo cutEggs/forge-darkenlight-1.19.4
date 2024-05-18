@@ -23,10 +23,13 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, darkenlight.MOD_ID);
 
 
-    public static final  RegistryObject<Block> JADE_BLOCK = registerBlock("Jade_Block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
-    public static final  RegistryObject<Block> JADE_ORE = registerBlock("Jade_Ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f)
+    public static final  RegistryObject<Block> JADE_BLOCK = registerBlock("jade_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST).strength(30)));
+    public static final  RegistryObject<Block> JADE_ORE = registerBlock("jade_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(30)
+                    .requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
+    public static final  RegistryObject<Block> DEEPSLATE_JADE_ORE = registerBlock("deepslate_jade_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(30)
                     .requiresCorrectToolForDrops(), UniformInt.of(1, 3)));
 
 

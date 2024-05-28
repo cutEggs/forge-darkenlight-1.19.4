@@ -6,10 +6,10 @@ plugins {
 }
 
 version = '0.0.1'
-group = 'net.cyludar.darkenlight'
+group = 'net.cyludar.gemsmc'
 
 base {
-    archivesName = 'darkenlight'
+    archivesName = 'gemsmc'
 }
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
@@ -75,10 +75,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'darkenlight'
+            property 'forge.enabledGameTestNamespaces', 'gemsmc'
 
             mods {
-                'darkenlight' {
+                'gemsmc' {
                     source sourceSets.main
                 }
             }
@@ -86,11 +86,11 @@ minecraft {
 
         client {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'darkenlight'
+            property 'forge.enabledGameTestNamespaces', 'gemsmc'
         }
 
         server {
-            property 'forge.enabledGameTestNamespaces', 'darkenlight'
+            property 'forge.enabledGameTestNamespaces', 'gemsmc'
             args '--nogui'
         }
 
@@ -98,7 +98,7 @@ minecraft {
         // By default, the server will crash when no gametests are provided.
         // The gametest system is also enabled by default for other run configs under the /test command.
         gameTestServer {
-            property 'forge.enabledGameTestNamespaces', 'darkenlight'
+            property 'forge.enabledGameTestNamespaces', 'gemsmc'
         }
 
         data {
@@ -106,7 +106,7 @@ minecraft {
             workingDirectory project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'darkenlight', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'gemsmc', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
     }
 }
@@ -158,7 +158,7 @@ tasks.named('processResources', ProcessResources).configure {
             minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
             forge_version: forge_version, forge_version_range: forge_version_range,
             loader_version_range: loader_version_range,
-            'darkenlight': 'darkenlight', mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
+            'gemsmc': 'gemsmc', mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
     ]
     inputs.properties replaceProperties
@@ -172,7 +172,7 @@ tasks.named('processResources', ProcessResources).configure {
 tasks.named('jar', Jar).configure {
     manifest {
         attributes([
-                'Specification-Title'     : 'darkenlight',
+                'Specification-Title'     : 'gemsmcg',
                 'Specification-Vendor'    : mod_authors,
                 'Specification-Version'   : '1', // We are version 1 of ourselves
                 'Implementation-Title'    : project.name,

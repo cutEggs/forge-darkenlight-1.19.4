@@ -49,11 +49,20 @@ public class GemsMC
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.JADE);
+            event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.AVENTURINE);
         }
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.JADE_BLOCK);
             event.accept(ModBlocks.JADE_ORE);
             event.accept(ModBlocks.DEEPSLATE_JADE_ORE);
+            event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
+            event.accept(ModBlocks.BLACK_OPAL_ORE);
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+            event.accept(ModBlocks.DEEPSLATE_AVENTURINE_ORE);
+            event.accept(ModBlocks.AVENTURINE_ORE);
+            event.accept(ModBlocks.AVENTURINE_BLOCK);
+
         }
     }
 

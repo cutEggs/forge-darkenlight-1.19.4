@@ -25,7 +25,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.JADE.get(), RecipeCategory.MISC,
                 ModBlocks.JADE_BLOCK.get());
-
+        nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.BLACK_OPAL.get(), RecipeCategory.MISC,
+                ModBlocks.BLACK_OPAL_BLOCK.get());
+        nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.AVENTURINE.get(), RecipeCategory.MISC,
+                ModBlocks.AVENTURINE_BLOCK.get());
 
     }
 

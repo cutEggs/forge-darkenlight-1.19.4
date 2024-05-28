@@ -20,6 +20,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.JADE);
+        simpleItem(ModItems.BLACK_OPAL);
+        simpleItem(ModItems.AVENTURINE);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

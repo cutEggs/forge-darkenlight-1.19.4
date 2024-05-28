@@ -19,6 +19,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.JADE_BLOCK);
         blockWithItem(ModBlocks.JADE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_JADE_ORE);
+        blockWithItem(ModBlocks.BLACK_OPAL_BLOCK);
+        blockWithItem(ModBlocks.BLACK_OPAL_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
+        blockWithItem(ModBlocks.AVENTURINE_BLOCK);
+        blockWithItem(ModBlocks.AVENTURINE_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_AVENTURINE_ORE);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

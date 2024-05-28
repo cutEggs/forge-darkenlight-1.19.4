@@ -2,6 +2,9 @@
   "values": [
     "gemsmc:deepslate_jade_ore",
     "gemsmc:jade_ore",
-    "gemsmc:jade_block"
+    "gemsmc:jade_block",
+    "gemsmc:deepslate_aventurine_ore",
+    "gemsmc:aventurine_ore",
+    "gemsmc:aventurine_block"
   ]
 }

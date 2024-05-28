@@ -18,14 +18,22 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> JADE_PLACED_KEY = createKey("jade_placed");
+    public static final ResourceKey<PlacedFeature> BLACK_OPAL_PLACED_KEY = createKey("black_opal_placed");
 
+    public static final ResourceKey<PlacedFeature> AVENTURINE_PLACED_KEY = createKey("aventurine_placed");
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, JADE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_JADE_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(3, // veins per chunk
+                ModOrePlacement.commonOrePlacement(6, // veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(80))));
+        register(context, BLACK_OPAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_BLACK_OPAL_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(9, // veins per chunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(80))));
 
+        register(context, AVENTURINE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_AVENTURINE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(9, // veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(80))));
     }
 
 
